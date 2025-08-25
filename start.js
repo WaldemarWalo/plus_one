@@ -1,20 +1,32 @@
 
 import express from "express";
-import listDBs from "./db.js";
+import { getCount, increment, reset } from "./db.js";
 
 console.log("App Starting ....")
 
 const app = express()
 app.use(express.json())
 
-app.get("/hc", (req, res) => {
-    res.send("OK")
+
+app.get("/c", async (req, res) => {
+    const resp = await getCount()
+    const c = resp.rows[0].val
+    res.send(c)
 })
 
-app.get("/list", async (req, res) => {
-    const resp = await listDBs()
-    res.send(resp)
+app.get("/i", async (req, res) => {
+    const resp = await increment()
+    const c = resp.rows[0].val
+    res.send(c)
 })
+
+app.get("/r", async (req, res) => {
+    const resp = await reset()
+    const c = resp.rows[0].val
+    res.send(c)
+})
+
+
 
 app.listen(3000, ()=> {
     console.log("App started !")

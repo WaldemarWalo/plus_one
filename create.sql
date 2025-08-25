@@ -1,3 +1,10 @@
+DROP TABLE counter;
+
 CREATE TABLE counter (
-    cont int not null default 0
-)
+    id SERIAL PRIMARY KEY,
+    val INT NOT NULL DEFAULT 0
+);
+
+select * from counter;
+
+INSERT INTO counter (val) VALUES (0);
