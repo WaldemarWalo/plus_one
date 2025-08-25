@@ -1,5 +1,6 @@
 
 import express from "express";
+import listDBs from "./db.js";
 
 console.log("App Starting ....")
 
@@ -8,6 +9,11 @@ app.use(express.json())
 
 app.get("/hc", (req, res) => {
     res.send("OK")
+})
+
+app.get("/list", async (req, res) => {
+    const resp = await listDBs()
+    res.send(resp)
 })
 
 app.listen(3000, ()=> {
