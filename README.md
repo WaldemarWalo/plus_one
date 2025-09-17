@@ -1,6 +1,7 @@
 # Setup PG Admin
 
 https://hub.docker.com/r/dpage/pgadmin4/
+
 docker pull dpage/pgadmin4:9.8
 
 CONTAINER_NAME=pgadmin
@@ -15,4 +16,15 @@ docker run \
 
 
 https://github.com/docker-library/docs/blob/master/postgres/README.md
-CONTAINER_NAME=psql
+https://github.com/docker-library/docs/blob/master/postgres/README.md
+
+
+
+# Start
+docker compose up -d
+
+# Stop
+docker compose down
+
+# Stop and remove volumes
+docker compose down -v
