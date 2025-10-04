@@ -2,7 +2,7 @@ import http from 'k6/http'
 
 export const options = {
     vus: 10,
-    duration: '3s'
+    iterations: 1000000
 }
 
 export default function() {
