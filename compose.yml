@@ -1,12 +1,12 @@
 services:
-  pgadmin:
-    image: dpage/pgadmin4:9.8
-    container_name: pgadmin
-    ports:
-      - "8000:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: user@domain.com
-      PGADMIN_DEFAULT_PASSWORD: pass
+  # pgadmin:
+  #   image: dpage/pgadmin4:9.8
+  #   container_name: pgadmin
+  #   ports:
+  #     - "8000:80"
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: user@domain.com
+  #     PGADMIN_DEFAULT_PASSWORD: pass
   
   pqsl:
     image: postgres:18rc1
