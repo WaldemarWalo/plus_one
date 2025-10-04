@@ -7,4 +7,9 @@ export const options = {
 
 export default function() {
     http.get("http://localhost:3000/count")
+
+    if (__ITER % 10 === 0){
+        http.get("http://localhost:3000/increment")
+    }
+
 }
