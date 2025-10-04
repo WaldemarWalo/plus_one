@@ -2,7 +2,12 @@ default:
 	cat Makefile
 
 run:
-	npm run src/start.js
+	npm run dev
+
+test:
+	curl localhost:3000/count -w '\n\n'
+	curl localhost:3000/increment -w '\n\n'
+	curl localhost:3000/count -w '\n\n'
 
 docker-run: docker-build
 	docker run \
