@@ -13,13 +13,13 @@ services:
     container_name: psql
     environment:
       POSTGRES_DB: appdb
-      POSTGRES_PASSWORD: pass
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/18/docker
+      # - postgres_data:/var/lib/postgresql/18/docker
       - ./psql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-volumes:
-  postgres_data:
+# volumes:
+#   postgres_data:
   

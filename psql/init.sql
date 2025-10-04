@@ -3,4 +3,4 @@ CREATE TABLE counter (
     val INT NOT NULL DEFAULT 0
 );
 
-INSERT INTO counter (val) VALUES (1), (2);
+INSERT INTO counter (val) VALUES (0)
